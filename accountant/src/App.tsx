@@ -4,7 +4,7 @@ import { PageLayout } from './components/PageLayout'
 import { ContractList } from './components/ContractList'
 import { ContractForm } from './components/ContractForm'
 import { PaymentSchedule } from './components/PaymentSchedule'
-import { CreateReceiptVoucher } from './components/CreateReceiptVoucher';
+import CreateReceiptVoucher  from './components/CreateReceiptVoucher';
 
 import './App.css'
 
