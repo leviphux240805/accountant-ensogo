@@ -1,0 +1,33 @@
+.receipt-container {
+  padding: 16px 24px;
+}
+
+.receipt-header {
+  margin-bottom: 20px;
+}
+
+.receipt-title {
+  margin-bottom: 0 !important;
+}
+
+.receipt-back-btn {
+  margin-right: 6px;
+}
+
+.receipt-card {
+  border-radius: 10px;
+}
+
+.receipt-number {
+  width: 100%;
+}
+
+.receipt-save-btn {
+  background: #28a745 !important;
+  border-color: #28a745 !important;
+  height: 38px;
+}
+
+.receipt-cancel-btn {
+  height: 38px;
+}
