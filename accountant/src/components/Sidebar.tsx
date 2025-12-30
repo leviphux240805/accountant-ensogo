@@ -45,6 +45,7 @@ const menuItems: MenuItem[] = [
     icon: <CheckCircle size={20} />,
     label: 'Phiếu thu/chi',
     submenu: [
+      { id: 'voucher-list', icon: undefined, label: 'Danh sách phiếu' },
       { id: 'receipts-incoming', icon: undefined, label: 'Phiếu thu' },
       { id: 'receipts-outgoing', icon: undefined, label: 'Phiếu chi' }
     ]
@@ -74,7 +75,7 @@ const menuItems: MenuItem[] = [
     label: 'Đối tác',
     submenu: [
       { id: 'partners-list', icon: undefined, label: 'Danh sách đối tác' },
-      { id: 'partners-create', icon: undefined, label: 'Thêm đối tác mới' }
+      { id: 'partners-create', icon: undefined, label: 'Thêm đối tác mới' },
     ]
   },
   {
@@ -97,7 +98,7 @@ const menuItems: MenuItem[] = [
 interface SidebarProps {
   isCollapsed?: boolean;
   onToggleCollapse?: (collapsed: boolean) => void;
-  onNavigate?: (page: 'dashboard' | 'contracts' | 'contracts-create' | 'payment-schedule' | 'receipts-create') => void;
+  onNavigate?: (page: 'dashboard' | 'contracts' | 'contracts-create' | 'payment-schedule' | 'receipts-create' | 'payments-create' | 'voucher-list') => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false, onToggleCollapse, onNavigate }) => {
@@ -132,6 +133,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed = false, onToggleC
       onNavigate?.('payment-schedule');
     } else if (submenuId === 'receipts-incoming') {
       onNavigate?.('receipts-create');
+    } else if (submenuId === 'receipts-outgoing') {
+      onNavigate?.('payments-create');
+    } else if (submenuId === 'voucher-list') {
+      onNavigate?.('voucher-list'); 
     }
   };
 

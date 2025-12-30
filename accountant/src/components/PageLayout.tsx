@@ -3,7 +3,8 @@ import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import './PageLayout.css';
 
-type Page = 'dashboard' | 'contracts' | 'contracts-create' | 'payment-schedule' | 'receipts-create'
+type Page = 'dashboard' | 'contracts' | 'contracts-create' | 'payment-schedule' | 'receipts-create' | 'payments-create' | 'voucher-list';
+
 
 interface PageLayoutProps {
   children: React.ReactNode;
